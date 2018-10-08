@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>layout</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+	label{
+		color: #DB1528;
+		font-style: italic;
+	}
+	.subjudul{
+		text-align: center;
+		font-weight: bolder;
+
+	}
+	body {
+		background-color: #92a8d1;
+	}
+
+	#menu
+	{
+		margin-right: 40px !important;
+		float:right;
+	}
+
+	#rumah
+	{
+		background-image: url(home.png);
+		display: block;
+		width: 23px;
+		height: 23px;
+		background-repeat: no-repeat;
+	}
+
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">			
+			<h1>Judul Halaman</h1>
+			<p>Latihan membuat layout sederhana using CSS</p>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="index.php" id="rumah"></a></li>
+				<li><a href="#">Menu2</a></li>
+				<li><a href="#">Menu3</a></li>
+				<li><a href="#">Menu4</a></li>
+				<li><a href="#">Menu5</a></li>	
+				<p class="subjudul">MENU</p>			
+			</ul>
+
+		</div>
+		
+		

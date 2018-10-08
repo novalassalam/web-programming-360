@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>layout</title>
+	<link rel="stylesheet" type="text/css" href="style.css"> <!-- css external -->
+	<style type="text/css">/*ini buat deklarasi css internal*/
+	label{
+		color: #DB1528;
+		font-style: italic;
+	}
+	.subjudul{
+		text-align: center;
+		font-weight: bolder;
+
+	}
+	body {
+		background-color: #92a8d1;
+	}
+
+	#menu
+	{
+		margin-right: 40px !important;
+		float:right;
+	}
+
+	#rumah
+	{
+		background-image: url(home.png);
+		display: block;
+		width: 23px;
+		height: 23px;
+		background-repeat: no-repeat;
+	}
+
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">			
+			<h1>Judul Halaman</h1>
+			<p>Latihan membuat layout sederhana using CSS</p>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="#" id="rumah"></a></li>
+				<li><a href="#">Menu2</a></li>
+				<li><a href="#">Menu3</a></li>
+				<li><a href="#">Menu4</a></li>
+				<li><a href="#">Menu5</a></li>	
+				<p class="subjudul">MENU</p>			
+			</ul>
+
+		</div>
+		<div class="badan">			
+			<div class="content">
+				<p class="subjudul">CONTENT</p>
+				<hr>
+				<table border=5 style="border-style: dotted;">
+					<tr>
+						<th>aa</th>
+						<th>bb</th>
+					</tr>
+					<tr>
+						<td>aa</td>
+						<td>bb</td>
+					</tr>
+				</table>
+			</div>
+			<div class="sidebar">
+				<p class="subjudul">SIDEBAR</p>
+				<hr>
+				<ul id="menu">
+					<li><a href="#">Sidebar1</a></li>
+					<li><a href="#">Sidebar2</a></li>
+					<li><a href="#">Sidebar3</a></li>
+					<li><a href="#">Sidebar4</a></li>				
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<p class="subjudul">-FOOTER-</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.wrap{
+	background: #F7E987;
+	width: 90%;
+	margin: 10px auto;
+}
+
+/*bagian header*/
+.wrap .header{
+	background: #ECB345;
+	padding: 2px 10px;
+}
+
+/*akhir header*/
+
+
+.wrap .menu ul{
+	padding: 0;
+	margin: 0;
+	background: yellow;
+	overflow: hidden;
+}
+
+.wrap .menu ul li{
+	float: left;
+	list-style-type: none;
+	padding: 10px;
+}
+/*akhir menu*/
+
+
+
+.badan{
+	height: 420px;
+}
+/*bagian sidebar*/
+.wrap .badan .sidebar{
+	background: orange;
+	float: right;	
+	width: 25%;
+	height: 100%;
+}
+
+/*akhir sidebar*/
+
+.wrap .badan .content{
+	background: red;
+	float: left;
+	height: 100%;
+	width: 75%;	
+}
+
+.wrap .footer{
+	width: 100%;
+	padding: 10px;
+	clear: both;
+}
