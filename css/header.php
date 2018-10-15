@@ -46,7 +46,8 @@
 				<li><a href="#">Menu2</a></li>
 				<li><a href="#">Menu3</a></li>
 				<li><a href="#">Menu4</a></li>
-				<li><a href="#">Menu5</a></li>	
+				<li><a href="#">Menu5</a></li>
+				<li><a href="logout.php">logout</a></li>	
 				<p class="subjudul">MENU</p>			
 			</ul>
 

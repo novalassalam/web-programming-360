@@ -1,3 +1,6 @@
+<?php
+   include('session.php');
+?>
 <?php include "header.php";?>
 
 <div class="badan">
@@ -6,7 +9,7 @@
 		<hr>
 		<a href="create.php">Tambah</a>
 		<br>
-
+ <h1>Welcome <?php echo $login_session['nama']; ?></h1>
 		<?php
                     // Include config file
 		require_once "config.php";
