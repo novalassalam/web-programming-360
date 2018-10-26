@@ -67,8 +67,8 @@ include('session.php');
 		<p class="subjudul">SIDEBAR</p>
 		<hr>
 		<ul id="menu">
-			<li><a href="#">Sidebar1</a></li>
-			<li><a href="#">Sidebar2</a></li>
+			<li><a href="file.php">uploadfile</a></li>
+			<li><a href="bootstrap.php">bootstrap</a></li>
 			<li><a href="#">Sidebar3</a></li>
 			<li><a href="#">Sidebar4</a></li>
 		</ul>

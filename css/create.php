@@ -46,13 +46,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 require_once "config.php";
                 $sql = "SELECT * FROM kota";
                 $result = $mysqli->query($sql);
-             
                 while($key = $result->fetch_object()){
-                       
                     ?>
                     <option value="<?php echo $key->id_kota?>" ><?php echo $key->nama_kota?></option>
                 <?php   }     ?>
-                
             </select>
             <br>
             <input type="submit" value="Submit">
