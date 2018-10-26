@@ -8,8 +8,8 @@
       
       $sql = "SELECT id_user FROM user WHERE email_user = '$myusername' and password_user = '$mypassword'";
       $result = mysqli_query($mysqli,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $nama = $row['nama_user'];
+      // $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      // $nama = $row['nama_user'];
       
       $count = mysqli_num_rows($result);
       		
@@ -20,7 +20,7 @@
          
          header("location: index.php");
       }else {
-         $error = "Your Login Name or Password is invalid";
+        echo "Your Login Name or Password is invalid";
       }
    }
 ?>

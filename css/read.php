@@ -21,7 +21,7 @@ require_once "config.php";
     <div class="content" style="width: 100%">
         <p class="subjudul">lihat data</p>
         <p>Please lihat  this form and submit to add employee record to the database.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form>
             Nama:<br>
             <input type="text" name="name" value="<?php echo $nama; ?>">
             <br>

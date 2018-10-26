@@ -1,5 +1,5 @@
 <?php
-   include('session.php');
+include('session.php');
 ?>
 <?php include "header.php";?>
 
@@ -9,7 +9,7 @@
 		<hr>
 		<a href="create.php">Tambah</a>
 		<br>
- <h1>Welcome <?php echo $login_session['nama']; ?></h1>
+		<h1>Welcome <?php echo $login_session['email']; ?></h1>
 		<?php
                     // Include config file
 		require_once "config.php";
@@ -48,7 +48,7 @@
 				</table>
 				<?php
 
-				$result->free();
+				// $result->free();
 			} else{
 				echo "<p class='lead'><em>No records were found.</em></p>";
 			}
@@ -57,7 +57,7 @@
 		}
 
                     // Close connection
-		$mysqli->close();
+		// $mysqli->close();
 		?>
 
 	</div>        

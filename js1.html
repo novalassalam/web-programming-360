@@ -4,28 +4,16 @@
 	<title>
 		javascript
 	</title>
-<!-- 	<script type="text/javascript">
+	<script type="text/javascript">
 		alert("hallo");
-	</script> -->
+	</script>
 	<script type="text/javascript">
 		function CheckLength() {
 			if (document.getElementById("ps").value.length < 3) {
 				alert("jumlah karakter password kurang dari 3");
 				return false;
 			} else {
-				
-				var input1 = document.getElementById("username").value;
-				var input2 = document.getElementById("ps").value;
-				if ((input1 == "13090036") && (input2 =="123456") ) {
-					
-					document.getElementById("form3").submit();
-				} else {
-					alert("isian username password salah");
-					return false;
-					
-					
-					
-				}
+				document.getElementById("form3").submit();
 			}
 		}
 	</script>
