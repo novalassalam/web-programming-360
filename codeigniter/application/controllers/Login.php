@@ -13,7 +13,16 @@ class Login extends CI_Controller {
 		$user = $this->input->post('username');
 		$pass = $this->input->post('password');
 		$this->load->model('M_login');
-		$this->M_login->cek_login($user,$pass);
+		$a = $this->M_login->cek_login($user,$pass);
+		if($a = 'valid'){
+			
+			redirect('Welcome','refresh');
+		} else {
+
+			$this->session->set_flashdata('notif', '<div class="alert alert-danger">gagal login</div>');
+			redirect('Login','refresh');
+		
+		}
 	}
 
 	function logout(){
