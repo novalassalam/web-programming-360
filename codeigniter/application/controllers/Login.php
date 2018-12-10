@@ -14,6 +14,9 @@ class Login extends CI_Controller {
 		$pass = $this->input->post('password');
 		$this->load->model('M_login');
 		$a = $this->M_login->cek_login($user,$pass);
+		// echo $this->db->last_query();
+		// var_dump($a);
+		// die();
 		if($a = 'valid'){
 			
 			redirect('Welcome','refresh');

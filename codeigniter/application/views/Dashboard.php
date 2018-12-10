@@ -7,7 +7,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-   <link rel="stylesheet" href="<?php echo base_url().'assets/Template/admin/plugins/font-awesome/css/font-awesome.min.css';?>">
+   <link rel="stylesheet" href=" plugins/font-awesome/css/font-awesome.min.css';?>">
 
   <link rel="stylesheet" href="<?php echo base_url('assets/Template/admin/plugins/font-awesome/css/font-awesome.min.css') ;?>">
   <!-- Ionicons -->
@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/Template/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.css') ;?>">
   <!-- Date Picker -->
   <link rel="stylesheet" href="<?php echo base_url('assets/Template/admin/plugins/datepicker/datepicker3.css') ;?>">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/Template/admin//plugins/datatables/dataTables.bootstrap4.min.css') ;?>">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="<?php echo base_url('assets/Template/admin/plugins/daterangepicker/daterangepicker-bs3.css') ;?>">
   <!-- bootstrap wysihtml5 - text editor -->
@@ -56,7 +58,7 @@
             <i class="fa fa-search"></i>
           </button>
         </div>
-      </div>
+      </div> 
     </form>
 
     <!-- Right navbar links -->
@@ -190,9 +192,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="<?php echo base_url('Welcome/user')?>" class="nav-link active">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>user</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -558,5 +560,20 @@
 <script src="<?php echo base_url('assets/Template/admin/dist/js/pages/dashboard.js') ;?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('assets/Template/admin/dist/js/demo.js') ;?>"></script>
+<script src="<?php echo base_url('assets/Template/admin/plugins/datatables/jquery.dataTables.min.js') ;?>"></script>
+<script src="<?php echo base_url('assets/Template/admin/plugins/datatables/dataTables.bootstrap4.min.js') ;?>"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
 </body>
 </html>
