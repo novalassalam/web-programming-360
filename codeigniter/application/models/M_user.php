@@ -20,6 +20,15 @@ class M_user extends CI_Model {
 		
 	}
 
+	function get_chart(){
+			$this->db->select("nama_kota,count(user.id_user) as 'total'");
+		$this->db->join('kota', 'kota.id_kota = user.id_kota', 'inner');
+		$this->db->group_by('kota.id_kota');
+		$this->db->order_by('kota.id_kota', 'desc');
+		$query = $this->db->get('user');
+		return $query->result_array();
+	}
+
 	function get_satu_data($id){
 
 		$this->db->join('kota', 'kota.id_kota = user.id_kota', 'inner');

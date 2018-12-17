@@ -71,6 +71,7 @@ class Welcome extends CI_Controller {
 			$data['isi'] = $this->user->get_satu_data($id);
 			$data['page'] = 'backend/user_view';
 			$this->load->view('Dashboard', $data, FALSE);
+
 		} else if($aksi =='tambah') {
 			if ($this->uri->segment(4) == 'proses') {
 				$data = array('email_user' => $this->input->post('email'), 
@@ -111,7 +112,64 @@ class Welcome extends CI_Controller {
 	}
 
 
+
+	function grafik(){
+		$this->load->model('M_user','user');
+		$array_kategori = array('Lokasi User');
+		$array_series = array(array('name'=>'persentase', 'data'=>array()));
+		$array_datas = array();
+		$data_user = $this->user->get_chart();
+		// lakukan perulangan untuk melihat index hasil
+		for( $i= 0 ; $i < count($data_user); $i++ ){
+			$array_datas[$data_user[$i]['nama_kota']] = intval($data_user[$i]['total']);
+		}
+
+// set value per data grafik
+		foreach($array_datas as $key=>$val){
+			array_push($array_series[0]['data'], array((string)$key, $val));
+		}
+
+		$data['array_kategori'] = json_encode($array_kategori);
+		$data['array_series'] = json_encode($array_series);
+		$data['page'] = 'backend/chart';
+		$this->load->view('Dashboard',$data,false);
+
+	}
+
+
 	
+
+
+	function crul(){
+		$ch = curl_init(); 
+// $url = "https://alumniphb.net/Welcome/link";
+		$url = base_url('Tes/api');
+    // set url o
+		curl_setopt($ch, CURLOPT_URL, $url);
+
+    // return the transfer as a string 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+    // $output contains the output string 
+		$output = curl_exec($ch); 
+
+    // tutup curl 
+		curl_close($ch);      
+
+    // menampilkan hasil curl
+		$data['crul'] =  json_decode($output);
+		$data['page'] = 'backend/user';
+		$this->load->view('Dashboard',$data,false);
+
+	}
+
+
+
+	
+
+
+
+
 }
 
 /* End of file Welcome.php */

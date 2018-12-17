@@ -198,15 +198,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="<?php echo base_url('Welcome/grafik')?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Dashboard v2</p>
+                  <p>grafik</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="<?php echo base_url('Tes/api')?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Dashboard v3</p>
+                  <p>Penghasil Api</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url('Welcome/crul')?>" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Get Api</p>
                 </a>
               </li>
             </ul>
