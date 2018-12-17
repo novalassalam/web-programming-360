@@ -8,7 +8,7 @@
              <?php echo $this->session->flashdata('notif'); ?>
             <h3 class="card-title">Data User</h3>
             <br>
-            <a class="btn btn-success btn-sm" href="<?php echo base_url('Welcome/aksi/add');?>">  <i class="fa fa-eye"></i> Tambah
+            <a class="btn btn-success btn-sm" href="<?php echo base_url('Welcome/aksi/tambah');?>">  <i class="fa fa-eye"></i> Tambah
                 </a>
           </div>
          
