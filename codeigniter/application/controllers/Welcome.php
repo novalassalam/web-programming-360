@@ -98,6 +98,19 @@ class Welcome extends CI_Controller {
 		
 	}
 
+	public function ajax_link($link){
+		if ($link == 1 ) {
+			echo 'ubah konten dengan link 1 ';
+		} else {
+			echo 'kontent link 2 ';
+		}
+		
+	}
+
+	public function ajax(){
+		$data['page'] = 'backend/ajax_page';
+		$this->load->view('Dashboard',$data,false);
+	}
 
 	public function coba()
 	{

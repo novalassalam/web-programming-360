@@ -204,7 +204,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url('Tes/api')?>" class="nav-link">
+                <a href="<?php echo base_url('Tes/api')?>" class="nav-link"target="_blank">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Penghasil Api</p>
                 </a>
@@ -213,6 +213,12 @@
                 <a href="<?php echo base_url('Welcome/crul')?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Get Api</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url('Welcome/ajax')?>" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Jquery Ajax</p>
                 </a>
               </li>
             </ul>
