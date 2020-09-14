@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pertemuan 2</title>
+</head>
+<body>
+	<b>image</b>
+	<br>
+	<img src="foto.jpg" width="30" height="30">
+	<br>
+	<br>
+	<form action="pertemuan1_link.html" method="post">
+		<label for="nm">nama</label> &nbsp <input type="text" name="nama" id ="nm" required="true">
+		<br>
+		<label for="pw">nim</label> &nbsp <input type="password" name="pass" id="pw" required="true">
+		<br>
+		<!-- select option -->
+		<b>level</b> 
+		<select name="level">
+			<option value="1">super admin</option>
+			<option value="2">admin</option>
+		</select>
+		<br>
+		<label for="almt">alamatnya</label>
+		<textarea name="alamat" id="almt"></textarea>
+		<br>
+		<input type="radio" name="gender" value="perempuan"> perempuan <br>
+		<input type="radio" name="gender" value="laki2" checked="true">laki-laki
+		<br>
+		<input type="checkbox" name="cek" value="makan" checked="true">makan
+		<br>
+		<input type="checkbox" name="cek" value="minum">minum
+		<br>
+		usia <input type="number" name="usia">
+		<br>
+		email <input type="email" name="emailku">
+		<br>
+		<input type="submit" value="post">
+		<br> 
+		<button type="submit">post juga</button>
+	</form>
+</body>
+</html>
+
