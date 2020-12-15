@@ -89,45 +89,45 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url('Welcome/user')?>" class="nav-link active">
+                <a href="<?php echo base_url('Welcome/user')?>" class="nav-link ">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>user</p>
+                  <p>User</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url('Welcome/grafik')?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>grafik</p>
+                  <p>Grafik</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url('Tes/api')?>" class="nav-link"target="_blank">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Penghasil Api</p>
+                  <p>API GET</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url('Welcome/crul')?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Get Api</p>
+                  <p>CURL GET</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url('Tes/eksekusi_post')?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Post Api</p>
+                  <p>CURL Post</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url('Tes/eksekusi_delete')?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Delete Api</p>
+                  <p>CURL Delete</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url('Tes/eksekusi_put')?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>PUT Api</p>
+                  <p>CURL PUT</p>
                 </a>
               </li>
               <li class="nav-item">
