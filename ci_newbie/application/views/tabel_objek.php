@@ -1,3 +1,4 @@
+<a href="<?php echo base_url('Cek/tambah'); ?>">tambah</a>
 <table>
     <thead>
         <tr>

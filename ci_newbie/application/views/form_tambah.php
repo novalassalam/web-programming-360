@@ -4,3 +4,6 @@
 <br>
 <button type="submit">simpan</button>
 <?php echo form_close(); ?>
+
+
+</form>

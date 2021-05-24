@@ -110,6 +110,7 @@ class Cek extends CI_Controller
     {
         $idnya = $this->input->get('id');
         $this->load->model('M_coba');
+
         $res = $this->M_coba->hapus($idnya);
         echo ($res) ? 'sukses' : 'gagal';
         redirect(base_url('Cek/db_get_result_object'));
