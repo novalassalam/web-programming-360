@@ -16,8 +16,8 @@ int pinAout = A0;
 int lpg_gas, co_gas, smoke_gas;
 MQ2 mq2(pinAout);
 const int sensorPin = 13; 
-String url = "http://192.168.43.74/codeigniter/sensor/index?lpg_gas=";
-String urlFlame = "http://192.168.43.74/codeigniter/sensor/sensor_flame?flame=";
+// isi dengan alamat ip anda dan folder project anda
+String url = "http://192.168.43.74/web-programming-360/sensor?lpg_gas=";
 void setup() {
     Serial.begin(9600);
     mq2.begin();
@@ -84,44 +84,7 @@ void loop() {
        WiFiMulti.addAP("rizal", ""); // Sesuaikan SSID dan password ini
     }
 
-    if((WiFiMulti.run() == WL_CONNECTED)) {
-        // Tambahkan nilai kepekatan asap, suhu, dan kelembapan pada URL yang sudah kita buat
-        if(bacasensor > 0){
-           int data = 1;
-           http.begin( urlFlame  +  (String) data); 
-        }else {
-           int data = 0;
-           http.begin( urlFlame  +  (String) data); 
-        }
-        // Mulai koneksi dengan metode GET
-        USE_SERIAL.print("[HTTP] Melakukan GET ke server...\n");
-        int httpCode = http.GET();
-
-        // Periksa httpCode, akan bernilai negatif kalau error
-        if(httpCode > 0) {
-            
-            // Tampilkan response http
-            USE_SERIAL.printf("[HTTP] kode response GET: %d\n", httpCode);
- 
-            // Bila koneksi berhasil, baca data response dari server
-            if(httpCode == HTTP_CODE_OK) {
-                payload = http.getString();
-                USE_SERIAL.println(payload);
-            }
- 
-        } else {
-            USE_SERIAL.printf("[HTTP] GET gagal, error: %s\n", http.errorToString(httpCode).c_str());
-        }
- 
-        http.end();
-        
-        delay(1000);
-         
-    } else {
-      USE_SERIAL.println("WiFi tidak terkoneksi, reconnect...");
-      WiFi.mode(WIFI_STA);
-       WiFiMulti.addAP("rizal", ""); // Sesuaikan SSID dan password ini
-    }
+    
  
     delay(4000);
 }
