@@ -18,6 +18,11 @@ class Welcome extends CI_Controller
 
 	public function index()
 	{
+		$this->load->model('M_dashboard'); //load dulu modelnya
+		$data['jml_user'] = $this->M_dashboard->total_user();
+		$data['jml_kota'] = $this->M_dashboard->total_kota();
+		$data['jml_pria'] = $this->M_dashboard->total_pria();
+		$data['jml_wanita'] = $this->M_dashboard->total_wanita();
 		$data['page'] = 'Home';
 		$this->load->view('Dashboard', $data, FALSE);
 	}
