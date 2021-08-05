@@ -25,6 +25,7 @@ class M_login extends CI_Model
 			);
 			if ($login) {
 				$this->session->set_userdata('data_login', $login);
+
 				return 'valid';
 			}
 		}

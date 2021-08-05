@@ -38,7 +38,6 @@
         <div class="small-box bg-warning">
           <div class="inner">
             <h3><?php echo $jml_pria->pria; ?></h3>
-
             <p>Data Pria</p>
           </div>
           <div class="icon">

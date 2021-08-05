@@ -8,7 +8,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href=" plugins/font-awesome/css/font-awesome.min.css';?>">
+  <!-- <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css';?>"> -->
 
   <link rel="stylesheet" href="<?php echo base_url('assets/Template/admin/plugins/font-awesome/css/font-awesome.min.css'); ?>">
   <!-- Ionicons -->
@@ -31,6 +31,11 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/Template/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'); ?>">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="<?php echo base_url('assets/Template/admin/plugins/jquery/jquery.min.js'); ?>"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -171,6 +176,12 @@
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a href="<?php echo base_url('Jquery/validation') ?>" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>Jquery Validation</p>
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a href="<?php echo base_url('Coba') ?>" class="nav-link">
                     <i class="fa fa-circle-o nav-icon"></i>
                     <p>HMVC</p>
@@ -225,9 +236,7 @@
   </div>
   <!-- ./wrapper -->
 
-  <!-- jQuery -->
-  <script src="<?php echo base_url('assets/Template/admin/plugins/jquery/jquery.min.js'); ?>"></script>
-  <!-- jQuery UI 1.11.4 -->
+
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
   <script>

@@ -3,6 +3,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_dashboard extends CI_Model
 {
+    // function __construct()
+    // {
+    //     //pengecekan jika level != super maka redirect ke login
+    //     if ($this->session->userdata('data_login')['log_level'] != '1') {
+    //         redirect(base_url());
+    //     }
+    // }
+
     function total_user()
     {
         // num_rows = menjumlah jumlah baris dari result sql
