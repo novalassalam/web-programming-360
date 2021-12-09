@@ -61,7 +61,7 @@ class Tes extends CI_Controller
 	}
 
 	function eksekusi_post()
-	{ 
+	{
 		$data['page'] = 'api/api_post';
 		$this->load->view('Dashboard', $data, FALSE);
 	}
@@ -73,7 +73,8 @@ class Tes extends CI_Controller
 		$this->db->where('id_kota', (int)$varid);
 		$del = $this->db->delete('kota');
 		if ($del) {
-			$response = array('status' => 'sukses'
+			$response = array(
+				'status' => 'sukses'
 			);
 		} else {
 			$response = array('status' => 'gagal');
@@ -84,7 +85,7 @@ class Tes extends CI_Controller
 
 	public function curl_delete()
 	{
-		$url = base_url('Tes/api_delete?id='.$this->input->post('idnya')); //delete gunakan metode get
+		$url = base_url('Tes/api_delete?id=' . $this->input->post('idnya')); //delete gunakan metode get
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
@@ -126,9 +127,9 @@ class Tes extends CI_Controller
 			'nama' => $this->input->post('namanya')
 		);
 		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PUT','Content-Type: application/x-www-form-urlencoded')); //heder untuk put berbeda dengan post 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postdata));
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PUT', 'Content-Type: application/x-www-form-urlencoded')); //heder untuk put berbeda dengan post 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postdata));
 		$result = curl_exec($ch);
 		curl_close($ch);
 		var_dump(json_decode($result));
@@ -138,6 +139,35 @@ class Tes extends CI_Controller
 	{
 		$data['page'] = 'api/api_put';
 		$this->load->view('Dashboard', $data, FALSE);
+	}
+
+	function comvis_post()
+	{
+		date_default_timezone_set('Asia/Jakarta');
+		//api digunakan untuk post data api adalah jembatannya
+		$now = date('Y-m-d');
+		$jam = date('H');
+		$varnama = $this->input->post('nama'); //variabel yg diperoleh dari hasil curl name harus sama
+		$varacc = $this->input->post('akurasi');
+		$data = array('nama' => $varnama, 'akurasi' => $varacc); //lakukan seperti kode insert biasa
+		$this->db->where('date(time)', $now);
+		$this->db->where('hour(time)', $jam);
+
+		$cek = $this->db->get('comvis')->row();
+		$cek2 = $this->db->last_query();
+		$in = false;
+		if ($cek == false) {
+			$in = $this->db->insert('comvis', $data);
+		}
+		if ($in) {
+			$response = array(
+				'status' => 'sukses'
+			); //ketika status sukses bikin array
+		} else {
+			$response = array('status' => 'sudah ada data');
+		}
+		header('Content-Type: application/json'); // output berformat json
+		echo json_encode($response, TRUE);
 	}
 }
 
